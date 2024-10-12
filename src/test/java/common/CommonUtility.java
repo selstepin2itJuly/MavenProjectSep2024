@@ -72,4 +72,9 @@ public class CommonUtility {
 		String image="<img src=\"data:image/png;base64,"+src+"\" height=\"600\" width=\"800\" />";
 		Reporter.log(image);
 	}
+	
+	public static void closeBrowser(WebDriver dr)
+	{
+		dr.quit();
+	}
 }

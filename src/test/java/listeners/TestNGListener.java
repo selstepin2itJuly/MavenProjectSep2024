@@ -20,6 +20,7 @@ public class TestNGListener implements ITestListener {
 		logger.info(tr.getName()+"\n"+tr.getStartMillis());
 		logger.info(tr.getEndMillis()+"\n"+tr.getStatus());
 		CommonUtility.attachScreenshot(Constants.driverConst);
+		CommonUtility.closeBrowser(Constants.driverConst);
 	}
 
 	@Override
@@ -29,6 +30,7 @@ public class TestNGListener implements ITestListener {
 		logger.info(tr.getName()+"\n"+tr.getStartMillis());
 		logger.info(tr.getEndMillis()+"\n"+tr.getStatus());
 		CommonUtility.attachScreenshot(Constants.driverConst);
+		CommonUtility.closeBrowser(Constants.driverConst);
 	}
 
 	@Override
@@ -38,6 +40,7 @@ public class TestNGListener implements ITestListener {
 		logger.info(tr.getName()+"\n"+tr.getStartMillis());
 		logger.info(tr.getEndMillis()+"\n"+tr.getStatus());
 		CommonUtility.attachScreenshot(Constants.driverConst);
+		CommonUtility.closeBrowser(Constants.driverConst);
 	}
 
 }

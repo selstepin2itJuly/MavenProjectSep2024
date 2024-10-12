@@ -71,7 +71,7 @@ public class LoginTest {
 
   @AfterMethod(alwaysRun=true) //PostCondition
   public void afterMethod() {
-	  tb.quitBrowser();
+	 // tb.quitBrowser();
   }
   @DataProvider(name="Invalid Users")
   public String[][] getInvalidUsers()

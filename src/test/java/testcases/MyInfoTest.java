@@ -81,7 +81,7 @@ public class MyInfoTest {
 
   @AfterClass(alwaysRun=true)
   public void afterClass() {
-	  tb.quitBrowser();
+	 // tb.quitBrowser();
   }
 
 }
