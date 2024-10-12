@@ -19,11 +19,6 @@ public class TestNGListener implements ITestListener {
 		Reporter.log(tr.getEndMillis()+"\n"+tr.getStatus());
 		logger.info(tr.getName()+"\n"+tr.getStartMillis());
 		logger.info(tr.getEndMillis()+"\n"+tr.getStatus());
-		
-		if(Constants.driverConst!=null) {
-			CommonUtility.attachScreenshot(Constants.driverConst);
-			CommonUtility.closeBrowser(Constants.driverConst);
-			}
 	}
 
 	@Override
@@ -32,10 +27,7 @@ public class TestNGListener implements ITestListener {
 		Reporter.log(tr.getEndMillis()+"\n"+tr.getStatus());
 		logger.info(tr.getName()+"\n"+tr.getStartMillis());
 		logger.info(tr.getEndMillis()+"\n"+tr.getStatus());
-		if(Constants.driverConst!=null) {
-			CommonUtility.attachScreenshot(Constants.driverConst);
-			CommonUtility.closeBrowser(Constants.driverConst);
-			}
+		
 	}
 
 	@Override
@@ -44,10 +36,7 @@ public class TestNGListener implements ITestListener {
 		Reporter.log(tr.getEndMillis()+"\n"+tr.getStatus());
 		logger.info(tr.getName()+"\n"+tr.getStartMillis());
 		logger.info(tr.getEndMillis()+"\n"+tr.getStatus());
-		if(Constants.driverConst!=null) {
-			CommonUtility.attachScreenshot(Constants.driverConst);
-			CommonUtility.closeBrowser(Constants.driverConst);
-			}
+			
 	}
 
 }

@@ -2,6 +2,8 @@ package testcases;
 
 import org.testng.annotations.Test;
 
+import common.CommonUtility;
+import driverUtility.Constants;
 import driverUtility.TestBase;
 import listeners.TestNGListener;
 import pages.DashboardPage;
@@ -71,7 +73,11 @@ public class LoginTest {
 
   @AfterMethod(alwaysRun=true) //PostCondition
   public void afterMethod() {
-	 // tb.quitBrowser();
+	  if(driver !=null) {
+			logger.info("Driver Value:"+driver);
+			CommonUtility.attachScreenshot(driver);
+			CommonUtility.closeBrowser(driver);
+			}
   }
   @DataProvider(name="Invalid Users")
   public String[][] getInvalidUsers()

@@ -3,6 +3,7 @@ package testcases;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+import common.CommonUtility;
 import driverUtility.TestBase;
 import listeners.TestNGListener;
 import pages.DashboardPage;
@@ -45,13 +46,13 @@ public class MyInfoTest {
 	  String[] data = {"Personal Details",
 			  "Contact Details",
 			  "Emergency Contacts",
-			  "Dependent",
+			  "Dependents",
 			  "Immigration",
 			  "Job",
 			  "Salary",
 			 // "Tax Exemptions",
 			  "Report-to",
-			  "Qualification",
+			  "Qualifications",
 			  "Memberships"};
 	  List<String> exp = Arrays.asList(data);
 	  //Assert.assertEquals(act, exp, "Menu Items Text");
@@ -81,7 +82,11 @@ public class MyInfoTest {
 
   @AfterClass(alwaysRun=true)
   public void afterClass() {
-	 // tb.quitBrowser();
+	  if(dr !=null) {
+			logger.info("Driver Value:"+dr);
+			CommonUtility.attachScreenshot(dr);
+			CommonUtility.closeBrowser(dr);
+			}
   }
 
 }
